@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="SUBMISSION AREA" android:textStyle="bold" android:textSize="18sp"/>
+
+        <EditText android:id="@+id/et_first_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="First Name" android:inputType="textPersonName"/>
+        <EditText android:id="@+id/et_last_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Last Name" android:inputType="textPersonName"/>
+        <EditText android:id="@+id/et_phone" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Phone Number" android:inputType="phone"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Education:" android:layout_marginTop="10dp"/>
+        <Spinner android:id="@+id/spinner_edu" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hobbies:" android:layout_marginTop="10dp"/>
+        <CheckBox android:id="@+id/cb_sports" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sports"/>
+        <CheckBox android:id="@+id/cb_reading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reading"/>
+        <CheckBox android:id="@+id/cb_music" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Music"/>
+
+        <Button android:id="@+id/btn_submit" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SUBMIT" android:layout_marginTop="10dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="2dp" android:background="#999999" android:layout_marginVertical="20dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="SEARCH AREA" android:textStyle="bold" android:textSize="18sp"/>
+
+        <AutoCompleteTextView android:id="@+id/actv_search" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Search by Name, Phone, or Edu..." android:completionThreshold="1"/>
+
+        <TextView android:id="@+id/tv_result" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:padding="10dp" android:background="#F0F0F0" android:textSize="16sp" android:textColor="#000000"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="edu_levels">
+        <item>Primary School</item>
+        <item>High School</item>
+        <item>University</item>
+        <item>Masters/PHD</item>
+    </string-array>
+</resources>
