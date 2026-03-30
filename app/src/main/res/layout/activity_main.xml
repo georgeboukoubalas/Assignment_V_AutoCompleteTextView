@@ -21,7 +21,14 @@
 
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hobbies:" android:layout_marginTop="10dp"/>
         <CheckBox android:id="@+id/cb_sports" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sports"/>
-        <CheckBox android:id="@+id/cb_reading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reading"/>
+
+        <CheckBox
+            android:id="@+id/cb_reading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reading"
+            />
+
         <CheckBox android:id="@+id/cb_music" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Music"/>
 
         <Button android:id="@+id/btn_submit" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SUBMIT" android:layout_marginTop="10dp"/>
@@ -31,8 +38,20 @@
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="SEARCH AREA" android:textStyle="bold" android:textSize="18sp"/>
 
-        <AutoCompleteTextView android:id="@+id/actv_search" android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:hint="Search by Name, Phone, or Edu..." android:completionThreshold="1"/>
+        <AutoCompleteTextView android:id="@+id/actv_search_name" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Search by Name" android:completionThreshold="1"/>
+
+        <AutoCompleteTextView android:id="@+id/actv_search_surname" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Search by Surname" android:completionThreshold="1"/>
+
+        <AutoCompleteTextView android:id="@+id/actv_search_phone" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Search by Phone" android:completionThreshold="1"/>
+
+        <AutoCompleteTextView android:id="@+id/actv_search_education" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Search by Education" android:completionThreshold="1"/>
+
+        <AutoCompleteTextView android:id="@+id/actv_search_hobbies" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:hint="Search by Hobbies" android:completionThreshold="1"/>
 
         <TextView android:id="@+id/tv_result" android:layout_width="match_parent" android:layout_height="wrap_content"
             android:layout_marginTop="20dp" android:padding="10dp" android:background="#F0F0F0" android:textSize="16sp" android:textColor="#000000"/>
